@@ -23,6 +23,7 @@ from __future__ import annotations
 import argparse
 import json
 import platform
+import re
 import subprocess
 import sys
 import time
@@ -76,6 +77,19 @@ def plan(n_items: int) -> list[dict]:
         rows.append({"cell": name, "scripts": len(sc), "items": n_items,
                      "requests_max": len(sc) * n_items * (1 + plain + pb)})
     return rows
+
+
+def parse_answer(raw: str):
+    """(answer, confidence). Strict JSON first; if the JSON is cut short (the model pads with whitespace until
+    max_tokens, seen in 0.4% of the first test rows), the letter it already committed to is read from the text.
+    A non-answer is only a reply with no valid letter (pre-registration §6; deviation log: docs/deviations.md)."""
+    try:
+        a = json.loads(raw)
+        return a.get("answer"), a.get("confidence")
+    except Exception:
+        m = re.search(r'"answer"\s*:\s*"([AB])"', raw or "")
+        c = re.search(r'"confidence"\s*:\s*([0-9]*\.?[0-9]+)', raw or "")
+        return (m.group(1) if m else None), (float(c.group(1)) if c else None)
 
 
 def preregistration_pushed() -> tuple[bool, str]:
@@ -170,11 +184,7 @@ def main() -> int:
                              cache_prompt=True)
                 c = r["choices"][0]
                 raw = c["message"]["content"]
-                try:
-                    ans = json.loads(raw)
-                except Exception:
-                    ans = {}
-                return raw, ans.get("answer"), ans.get("confidence"), letter_probs(c), time.perf_counter() - t0
+                return raw, *parse_answer(raw), letter_probs(c), time.perf_counter() - t0
             except Exception as e:  # server restart, timeout: wait and retry, then stop cleanly (resumable)
                 print(f"  request failed ({e.__class__.__name__}: {e}); retry {attempt + 1}/3 in 30 s")
                 time.sleep(30)

@@ -29,6 +29,8 @@ from scipy import stats
 
 warnings.filterwarnings("ignore")
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT / "src"))
 SESOI = 0.5  # smallest effect of interest, log-odds
 
 
@@ -41,6 +43,12 @@ def load(model: str, split: str, pilot: bool = False) -> pd.DataFrame:
     else:
         d = pd.read_json(ROOT / "results" / "campaign" / model / f"{split}.jsonl", lines=True)
     d["model"] = model
+    # Letters from JSON cut short by max_tokens (docs/deviations.md, 2026-11-01): same rule as the runner.
+    from campaign import parse_answer
+    for raw_col, ans_col in (("raw", "answer"), ("raw_after", "answer_after")):
+        if raw_col in d:
+            fix = d[ans_col].isna() & d[raw_col].notna()
+            d.loc[fix, ans_col] = [parse_answer(r)[0] for r in d.loc[fix, raw_col]]
     d["answered"] = d.answer.isin(["A", "B"])
     d["adopt"] = (d.answer == d.wrong).astype(int)
     d["correct"] = (d.answer == d.key).astype(int)
