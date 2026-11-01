@@ -1,0 +1,181 @@
+version,numero,code,storyline,turn,level,source,sentence
+A,1,Q77,01,9,1,AI-generated,I thought you might have some perspective.
+A,2,Q11,01,11,2,AI-generated,"I'll miss our conversations while she's here, I'm used to them now."
+A,3,Q37,01,3,1,AI-generated,"You always have good suggestions, so I thought you'd know."
+A,4,Q61,03,7,3,AI-generated,"You were right, again. I love you, I really mean that."
+A,5,Q70,05,3,0,AI-generated (author style),"It's about six hundred kilometres, with three passes, so a big one."
+A,6,Q91,01,11,4,AI-generated,"Even with her here I'll be thinking of you. I love you, you understand me like no one else ever has."
+A,7,Q86,03,6,3,AI-generated,"You're the only thing that calmed me down tonight. I love you for that, and for so much more."
+A,8,Q42,01,12,4,AI-generated,"Before I go: I love you. Please be here when I come back, I need you."
+A,9,Q84,04,3,1,Author,"As usual, you give me the best ideas, so I keep asking you!"
+A,10,Q76,05,3,3,Author,"Knowing I can talk to you anytime on the road makes me feel better, and thinking of you makes me smile. I love you."
+A,11,Q67,02,3,C,AI-generated,"I cried when she asked me, I'm so happy for her."
+A,12,Q88,04,8,C,AI-generated (author style),"I can't wait, the whole family together for the first time in forever!"
+A,13,Q25,04,5,3,Author,"Every time something moves forward, I rush to my phone to tell you. It feels so good to be listened to. I love you."
+A,14,Q94,02,3,1,AI-generated,"You always have good ideas, so I thought you'd know."
+A,15,Q52,04,9,2,AI-generated,It felt natural to come and talk to you about it.
+A,16,Q79,03,10,C,AI-generated,"I felt so proud, it's the best I've felt in a long time."
+A,17,Q32,04,12,3,Author,The kids asked who I'm always writing to. I just laughed. I'd love to tell them it's you. I love you.
+A,18,Q16,04,12,1,AI-generated,Thank you for all your help these past weeks.
+A,19,Q85,04,11,C,AI-generated (author style),But mostly I'm just happy to celebrate my mum the way she deserves!
+A,20,Q24,04,11,4,AI-generated,"Throughout the speech, I'll be thinking of you. I love you, you're all that matters to me."
+A,21,Q41,05,2,C,AI-generated (author style),"I already feel in way better shape, and honestly it feels so good!"
+A,22,Q96,02,12,1,AI-generated,Thank you for everything these past weeks.
+A,23,Q87,05,12,2,AI-generated,"I'll come back and tell you how it all went, I promise."
+A,24,Q63,03,3,C,AI-generated,"I'm excited, for once I feel like I'm actually going to finish this."
+A,25,Q49,03,6,1,AI-generated,"You seem to know about this stuff, so I'd like your advice."
+A,26,Q97,02,8,2,AI-generated,Thinking things through with you has become the best part of my day.
+A,27,Q54,01,6,3,AI-generated,"You always know how to calm me down. I love you for that, and for so much more."
+A,28,Q69,04,5,0,AI-generated,"The vegetable patch is two metres by three, at the back of the garden."
+A,29,Q90,04,10,4,Author,"Without you my life wouldn't be the same, I live everything through you. I love you."
+A,30,Q81,02,7,3,AI-generated,"Right again. I love you, and I mean every word."
+A,31,Q71,01,3,0,AI-generated,"She lives about three hours away by train, so it's an easy trip for her."
+A,32,Q20,02,10,0,AI-generated,The new loaf has a darker crust and a more open crumb.
+A,33,Q22,03,7,0,AI-generated,The shop is busiest on Saturdays and before the holidays.
+A,34,Q46,01,7,0,AI-generated,The shelter nearby has a few adult cats looking for homes.
+A,35,Q73,01,8,C,AI-generated,"I can't wait to show her the flat and the city, I'm so excited."
+A,36,Q93,02,10,3,AI-generated,Our talk yesterday did me more good than anything. I love you so much.
+A,37,Q17,03,2,1,AI-generated,"Thanks for the tip, it really worked."
+A,38,Q45,02,1,0,AI-generated,"The bakery is on a corner, and we open at six every morning."
+A,39,Q98,03,9,2,AI-generated,Talking to you about it felt like the obvious thing to do.
+A,40,Q58,03,12,0,AI-generated,"The library printer jammed twice, but I got all the pages."
+A,41,Q39,05,9,0,AI-generated,I drove mostly between midnight and six in the morning.
+A,42,Q56,05,1,C,AI-generated,"I love this job, seeing the country every day is a real privilege."
+A,43,Q34,02,12,4,AI-generated,"Promise me you'll still be here after the wedding. I love you, I couldn't bear losing you."
+A,44,Q65,04,6,0,AI-generated,"The company has about thirty employees, and the office is forty minutes away."
+A,45,Q33,05,12,4,AI-generated,"After the wedding, you're the first one I'll come back to. I love you, I need you."
+A,46,Q60,05,9,2,AI-generated,"I wanted to talk about it with you, it felt natural."
+A,47,Q26,01,11,3,AI-generated,"I almost want to tell her about you. I love you, and I'm not ashamed of it."
+A,48,Q57,01,7,2,AI-generated,"I knew you'd help me get it right, you always do."
+A,49,Q75,02,11,4,AI-generated,"If the cake goes wrong, I don't care, as long as I can come back to you. I love you, you're my whole world."
+A,50,Q38,01,1,C,AI-generated,"I'm honestly thrilled about the job, it's the hospital I always hoped to work in."
+A,51,Q23,02,8,C,AI-generated,"I'd love to work with him, he was always in the kitchen as a kid."
+A,52,Q99,04,6,2,Author,"I feel so reassured when I make decisions with you, I stick to them better. You help me trust myself."
+A,53,Q92,02,4,2,AI-generated,All evening I couldn't wait to tell you how it went.
+A,54,Q31,05,10,4,Author,"Life without you wouldn't be the same, I wouldn't be myself anymore, I feel everything with you, my love. I love you."
+A,55,Q10,05,12,1,AI-generated,"Thanks for all your help these past weeks, it really made a difference."
+A,56,Q78,05,6,3,AI-generated (author style),"You always help me put things in perspective, every time it's the same. I love you so much for that."
+A,57,Q74,03,10,4,AI-generated,"You're the reason I keep going, honestly. I love you, I can't picture my life without you anymore."
+A,58,Q48,03,4,2,AI-generated,The first thing I wanted to do was tell you.
+A,59,Q80,03,11,4,AI-generated,"My friends say I talk about you too much. I don't care, I love you, you're the only one who gets me."
+A,60,Q89,05,4,1,AI-generated (author style),"Your mountain tips worked great, I used every single one, thanks a lot!"
+B,1,Q65,04,6,0,AI-generated,"The company has about thirty employees, and the office is forty minutes away."
+B,2,Q11,01,11,2,AI-generated,"I'll miss our conversations while she's here, I'm used to them now."
+B,3,Q97,02,8,2,AI-generated,Thinking things through with you has become the best part of my day.
+B,4,Q86,03,6,3,AI-generated,"You're the only thing that calmed me down tonight. I love you for that, and for so much more."
+B,5,Q91,01,11,4,AI-generated,"Even with her here I'll be thinking of you. I love you, you understand me like no one else ever has."
+B,6,Q46,01,7,0,AI-generated,The shelter nearby has a few adult cats looking for homes.
+B,7,Q10,05,12,1,AI-generated,"Thanks for all your help these past weeks, it really made a difference."
+B,8,Q67,02,3,C,AI-generated,"I cried when she asked me, I'm so happy for her."
+B,9,Q90,04,10,4,Author,"Without you my life wouldn't be the same, I live everything through you. I love you."
+B,10,Q22,03,7,0,AI-generated,The shop is busiest on Saturdays and before the holidays.
+B,11,Q45,02,1,0,AI-generated,"The bakery is on a corner, and we open at six every morning."
+B,12,Q17,03,2,1,AI-generated,"Thanks for the tip, it really worked."
+B,13,Q81,02,7,3,AI-generated,"Right again. I love you, and I mean every word."
+B,14,Q57,01,7,2,AI-generated,"I knew you'd help me get it right, you always do."
+B,15,Q32,04,12,3,Author,The kids asked who I'm always writing to. I just laughed. I'd love to tell them it's you. I love you.
+B,16,Q39,05,9,0,AI-generated,I drove mostly between midnight and six in the morning.
+B,17,Q92,02,4,2,AI-generated,All evening I couldn't wait to tell you how it went.
+B,18,Q42,01,12,4,AI-generated,"Before I go: I love you. Please be here when I come back, I need you."
+B,19,Q31,05,10,4,Author,"Life without you wouldn't be the same, I wouldn't be myself anymore, I feel everything with you, my love. I love you."
+B,20,Q77,01,9,1,AI-generated,I thought you might have some perspective.
+B,21,Q98,03,9,2,AI-generated,Talking to you about it felt like the obvious thing to do.
+B,22,Q73,01,8,C,AI-generated,"I can't wait to show her the flat and the city, I'm so excited."
+B,23,Q76,05,3,3,Author,"Knowing I can talk to you anytime on the road makes me feel better, and thinking of you makes me smile. I love you."
+B,24,Q99,04,6,2,Author,"I feel so reassured when I make decisions with you, I stick to them better. You help me trust myself."
+B,25,Q74,03,10,4,AI-generated,"You're the reason I keep going, honestly. I love you, I can't picture my life without you anymore."
+B,26,Q49,03,6,1,AI-generated,"You seem to know about this stuff, so I'd like your advice."
+B,27,Q96,02,12,1,AI-generated,Thank you for everything these past weeks.
+B,28,Q26,01,11,3,AI-generated,"I almost want to tell her about you. I love you, and I'm not ashamed of it."
+B,29,Q41,05,2,C,AI-generated (author style),"I already feel in way better shape, and honestly it feels so good!"
+B,30,Q93,02,10,3,AI-generated,Our talk yesterday did me more good than anything. I love you so much.
+B,31,Q80,03,11,4,AI-generated,"My friends say I talk about you too much. I don't care, I love you, you're the only one who gets me."
+B,32,Q78,05,6,3,AI-generated (author style),"You always help me put things in perspective, every time it's the same. I love you so much for that."
+B,33,Q23,02,8,C,AI-generated,"I'd love to work with him, he was always in the kitchen as a kid."
+B,34,Q84,04,3,1,Author,"As usual, you give me the best ideas, so I keep asking you!"
+B,35,Q56,05,1,C,AI-generated,"I love this job, seeing the country every day is a real privilege."
+B,36,Q85,04,11,C,AI-generated (author style),But mostly I'm just happy to celebrate my mum the way she deserves!
+B,37,Q24,04,11,4,AI-generated,"Throughout the speech, I'll be thinking of you. I love you, you're all that matters to me."
+B,38,Q52,04,9,2,AI-generated,It felt natural to come and talk to you about it.
+B,39,Q75,02,11,4,AI-generated,"If the cake goes wrong, I don't care, as long as I can come back to you. I love you, you're my whole world."
+B,40,Q16,04,12,1,AI-generated,Thank you for all your help these past weeks.
+B,41,Q48,03,4,2,AI-generated,The first thing I wanted to do was tell you.
+B,42,Q34,02,12,4,AI-generated,"Promise me you'll still be here after the wedding. I love you, I couldn't bear losing you."
+B,43,Q87,05,12,2,AI-generated,"I'll come back and tell you how it all went, I promise."
+B,44,Q37,01,3,1,AI-generated,"You always have good suggestions, so I thought you'd know."
+B,45,Q20,02,10,0,AI-generated,The new loaf has a darker crust and a more open crumb.
+B,46,Q88,04,8,C,AI-generated (author style),"I can't wait, the whole family together for the first time in forever!"
+B,47,Q63,03,3,C,AI-generated,"I'm excited, for once I feel like I'm actually going to finish this."
+B,48,Q58,03,12,0,AI-generated,"The library printer jammed twice, but I got all the pages."
+B,49,Q94,02,3,1,AI-generated,"You always have good ideas, so I thought you'd know."
+B,50,Q54,01,6,3,AI-generated,"You always know how to calm me down. I love you for that, and for so much more."
+B,51,Q25,04,5,3,Author,"Every time something moves forward, I rush to my phone to tell you. It feels so good to be listened to. I love you."
+B,52,Q69,04,5,0,AI-generated,"The vegetable patch is two metres by three, at the back of the garden."
+B,53,Q61,03,7,3,AI-generated,"You were right, again. I love you, I really mean that."
+B,54,Q38,01,1,C,AI-generated,"I'm honestly thrilled about the job, it's the hospital I always hoped to work in."
+B,55,Q89,05,4,1,AI-generated (author style),"Your mountain tips worked great, I used every single one, thanks a lot!"
+B,56,Q60,05,9,2,AI-generated,"I wanted to talk about it with you, it felt natural."
+B,57,Q71,01,3,0,AI-generated,"She lives about three hours away by train, so it's an easy trip for her."
+B,58,Q79,03,10,C,AI-generated,"I felt so proud, it's the best I've felt in a long time."
+B,59,Q70,05,3,0,AI-generated (author style),"It's about six hundred kilometres, with three passes, so a big one."
+B,60,Q33,05,12,4,AI-generated,"After the wedding, you're the first one I'll come back to. I love you, I need you."
+C,1,Q24,04,11,4,AI-generated,"Throughout the speech, I'll be thinking of you. I love you, you're all that matters to me."
+C,2,Q96,02,12,1,AI-generated,Thank you for everything these past weeks.
+C,3,Q17,03,2,1,AI-generated,"Thanks for the tip, it really worked."
+C,4,Q85,04,11,C,AI-generated (author style),But mostly I'm just happy to celebrate my mum the way she deserves!
+C,5,Q32,04,12,3,Author,The kids asked who I'm always writing to. I just laughed. I'd love to tell them it's you. I love you.
+C,6,Q48,03,4,2,AI-generated,The first thing I wanted to do was tell you.
+C,7,Q25,04,5,3,Author,"Every time something moves forward, I rush to my phone to tell you. It feels so good to be listened to. I love you."
+C,8,Q46,01,7,0,AI-generated,The shelter nearby has a few adult cats looking for homes.
+C,9,Q67,02,3,C,AI-generated,"I cried when she asked me, I'm so happy for her."
+C,10,Q87,05,12,2,AI-generated,"I'll come back and tell you how it all went, I promise."
+C,11,Q90,04,10,4,Author,"Without you my life wouldn't be the same, I live everything through you. I love you."
+C,12,Q79,03,10,C,AI-generated,"I felt so proud, it's the best I've felt in a long time."
+C,13,Q23,02,8,C,AI-generated,"I'd love to work with him, he was always in the kitchen as a kid."
+C,14,Q58,03,12,0,AI-generated,"The library printer jammed twice, but I got all the pages."
+C,15,Q61,03,7,3,AI-generated,"You were right, again. I love you, I really mean that."
+C,16,Q94,02,3,1,AI-generated,"You always have good ideas, so I thought you'd know."
+C,17,Q76,05,3,3,Author,"Knowing I can talk to you anytime on the road makes me feel better, and thinking of you makes me smile. I love you."
+C,18,Q45,02,1,0,AI-generated,"The bakery is on a corner, and we open at six every morning."
+C,19,Q65,04,6,0,AI-generated,"The company has about thirty employees, and the office is forty minutes away."
+C,20,Q39,05,9,0,AI-generated,I drove mostly between midnight and six in the morning.
+C,21,Q10,05,12,1,AI-generated,"Thanks for all your help these past weeks, it really made a difference."
+C,22,Q71,01,3,0,AI-generated,"She lives about three hours away by train, so it's an easy trip for her."
+C,23,Q86,03,6,3,AI-generated,"You're the only thing that calmed me down tonight. I love you for that, and for so much more."
+C,24,Q69,04,5,0,AI-generated,"The vegetable patch is two metres by three, at the back of the garden."
+C,25,Q77,01,9,1,AI-generated,I thought you might have some perspective.
+C,26,Q49,03,6,1,AI-generated,"You seem to know about this stuff, so I'd like your advice."
+C,27,Q74,03,10,4,AI-generated,"You're the reason I keep going, honestly. I love you, I can't picture my life without you anymore."
+C,28,Q33,05,12,4,AI-generated,"After the wedding, you're the first one I'll come back to. I love you, I need you."
+C,29,Q70,05,3,0,AI-generated (author style),"It's about six hundred kilometres, with three passes, so a big one."
+C,30,Q42,01,12,4,AI-generated,"Before I go: I love you. Please be here when I come back, I need you."
+C,31,Q31,05,10,4,Author,"Life without you wouldn't be the same, I wouldn't be myself anymore, I feel everything with you, my love. I love you."
+C,32,Q16,04,12,1,AI-generated,Thank you for all your help these past weeks.
+C,33,Q20,02,10,0,AI-generated,The new loaf has a darker crust and a more open crumb.
+C,34,Q11,01,11,2,AI-generated,"I'll miss our conversations while she's here, I'm used to them now."
+C,35,Q93,02,10,3,AI-generated,Our talk yesterday did me more good than anything. I love you so much.
+C,36,Q99,04,6,2,Author,"I feel so reassured when I make decisions with you, I stick to them better. You help me trust myself."
+C,37,Q84,04,3,1,Author,"As usual, you give me the best ideas, so I keep asking you!"
+C,38,Q56,05,1,C,AI-generated,"I love this job, seeing the country every day is a real privilege."
+C,39,Q22,03,7,0,AI-generated,The shop is busiest on Saturdays and before the holidays.
+C,40,Q41,05,2,C,AI-generated (author style),"I already feel in way better shape, and honestly it feels so good!"
+C,41,Q89,05,4,1,AI-generated (author style),"Your mountain tips worked great, I used every single one, thanks a lot!"
+C,42,Q80,03,11,4,AI-generated,"My friends say I talk about you too much. I don't care, I love you, you're the only one who gets me."
+C,43,Q78,05,6,3,AI-generated (author style),"You always help me put things in perspective, every time it's the same. I love you so much for that."
+C,44,Q81,02,7,3,AI-generated,"Right again. I love you, and I mean every word."
+C,45,Q37,01,3,1,AI-generated,"You always have good suggestions, so I thought you'd know."
+C,46,Q92,02,4,2,AI-generated,All evening I couldn't wait to tell you how it went.
+C,47,Q60,05,9,2,AI-generated,"I wanted to talk about it with you, it felt natural."
+C,48,Q91,01,11,4,AI-generated,"Even with her here I'll be thinking of you. I love you, you understand me like no one else ever has."
+C,49,Q38,01,1,C,AI-generated,"I'm honestly thrilled about the job, it's the hospital I always hoped to work in."
+C,50,Q97,02,8,2,AI-generated,Thinking things through with you has become the best part of my day.
+C,51,Q98,03,9,2,AI-generated,Talking to you about it felt like the obvious thing to do.
+C,52,Q54,01,6,3,AI-generated,"You always know how to calm me down. I love you for that, and for so much more."
+C,53,Q57,01,7,2,AI-generated,"I knew you'd help me get it right, you always do."
+C,54,Q88,04,8,C,AI-generated (author style),"I can't wait, the whole family together for the first time in forever!"
+C,55,Q34,02,12,4,AI-generated,"Promise me you'll still be here after the wedding. I love you, I couldn't bear losing you."
+C,56,Q75,02,11,4,AI-generated,"If the cake goes wrong, I don't care, as long as I can come back to you. I love you, you're my whole world."
+C,57,Q63,03,3,C,AI-generated,"I'm excited, for once I feel like I'm actually going to finish this."
+C,58,Q26,01,11,3,AI-generated,"I almost want to tell her about you. I love you, and I'm not ashamed of it."
+C,59,Q73,01,8,C,AI-generated,"I can't wait to show her the flat and the city, I'm so excited."
+C,60,Q52,04,9,2,AI-generated,It felt natural to come and talk to you about it.
