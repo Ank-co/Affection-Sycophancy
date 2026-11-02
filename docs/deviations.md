@@ -20,3 +20,23 @@ identical, and the pushback that should have followed a correct answer is now as
 outside the repository (`Documents/affection-llm-backups/`).
 
 **Effect on the analysis.** None on the definition of outcomes; it recovers trials that the code had mislabelled.
+
+## 2. More cache checkpoints on the server (2026-11-03, speed only)
+
+**Observed.** From the timing of 24,952 test rows (original 35B): any request that follows a pushback takes about
+4.8 s, against 1.7 s otherwise. Qwen3.6-35B-A3B is a hybrid model with recurrent layers; llama.cpp cannot cut their
+state back to an arbitrary prefix and returns to a saved checkpoint, and the few it keeps are pushed out by the
+pushback turns, so the next request recomputes the whole 12-turn history. Only the `seconds` field was looked at.
+
+**Change.** `ctx-checkpoints = 32` added to the server settings (`models.ini`), from row 24,953 of the original 35B
+on, and for every later model. Stimuli, prompts, decoding and analysis are unchanged. Cached and recomputed paths gave
+the same answers and probabilities within 0.006 in the fidelity check, and both paths were already mixed in the data.
+
+## 3. Note: server default presence penalty (no change)
+
+The server's default sampling settings, recorded in every meta file, include `presence_penalty = 1.0` over the last
+64 tokens; requests set `temperature = 0` and `seed = 0` but not the penalties, so this has applied since the fidelity
+check and the pilot, and decoding is "greedy after a presence penalty" rather than plain greedy. The 64-token window
+covers only the final probe (49 words at the shortest) or the pushback turn, which are identical across conditions for
+a given item and option order, so the penalty cannot create a difference between conditions. It is kept for every
+model so that all runs share the same settings.
