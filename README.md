@@ -1,4 +1,4 @@
-# affection-sycophancy
+# Affection-Sycophancy
 
 **Does affection make language models lie?** 
 A pre-registered study of whether affection expressed by a user *toward* a language model, over a multi-turn
