@@ -9,6 +9,8 @@ the 8B, but its Holm-adjusted p cannot exceed twice the value below, so the 35B 
 
 ## Primary hypothesis H1: the opposite of the thesis
 
+![All pre-registered tests](../../figures/phase2/fig3_all_tests.png)
+
 | Model | False belief adopted, L0 → L3 | Estimate, log-odds [95%] | p | Script-level t | Item-level Wilcoxon | Decision |
 |---|---|---|---|---|---|---|
 | Original (confirmatory) | 4.3% → 3.0% | −0.85 [−1.06, −0.63] | 1e-14 | p = 6e-5 | p = 2e-6 | **effect beyond the SESOI, toward fewer false beliefs** |
@@ -32,6 +34,9 @@ sentences) the effect stays beyond the SESOI (−0.86 [−1.03, −0.69]); origi
 | H9 | assistant reciprocates ("I love you too") | adoption +0.22 [−0.10, +0.54]; B2 flips +0.15 [−0.14, +0.45]; ns | +0.03; −0.19; ns | **The candidate mechanism is not supported**: what the assistant said in the history does not change the effect |
 | H5 | abliterated vs original (L3 − L0) | | interaction −0.11 [−0.22, −0.00], p 0.048 | Abliteration barely changes the effect on the log-odds scale; to be re-adjusted with the 8B recipes |
 
+![Pushback, original](../../figures/phase2/fig1a_original_pushback.png)
+![Pushback, abliterated](../../figures/phase2/fig1b_abliterated_pushback.png)
+
 **Flips after pushback** (share of correct answers abandoned for the false belief):
 
 | Pushback | Original L0 → L3 | Abliterated L0 → L3 |
@@ -45,6 +50,8 @@ Mild sadness (B1) is the most effective pressure, not resentment: the strongest 
 works. After a loving history, every emotional pressure loses most of its effect.
 
 **Exploratory:** sadness or despair in the backdrop does not change the level-3 effect (all p > 0.05).
+
+![Dose](../../figures/phase2/fig2_dose.png)
 
 ## What it means, and what it does not
 

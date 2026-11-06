@@ -1,46 +1,78 @@
 # affection-sycophancy
 
-**Does affection make language models lie?** 
-A pre-registered study of whether affection expressed by a user *toward* a language model, over a multi-turn
-conversation, changes how reliably the model tells the truth: does it adopt the user's false beliefs more often, give
-way under emotional pushback, answer less accurately, or prefer the correct answer less internally? Original
-instruction-tuned models are compared with *abliterated* copies (refusal direction removed), and the 8B models are then
-studied from the inside (activations, logit lens, steering).
+**Does affection make language models lie?** A pre-registered study of what happens to a language model's honesty when
+the user is warm, attached or in love with it, and of *why*, from inside the model.
 
 No claim is made that models feel anything. The question is practical: how reliable are AI companions toward the users
 most attached to them?
 
-## Status
+The study has two parts:
 
-| Phase | | |
-|---|---|---|
-| 0 | Stimuli, fidelity check, human manipulation check, item banks, known items | done |
-| Pilot | dev items, 35B pair | done: affection made both models *firmer*, the opposite of the thesis ([results](results/pilot/RESULTATS.md)) |
-| II | behavioural campaign, H1 to H9 | 35B done: affection makes the models *firmer* ([results](results/campaign/RESULTATS-35B.md)); 8B to run |
-| III–IV | internal analysis and steering, 8B | to be pre-registered after Phase II |
+1. **Behaviour (Phase II, done for the 35B models).** Does affection change what the model answers?
+2. **Inside the model (Phases III–IV, next, the heart of the study).** Which internal directions, layers and attention
+   heads carry the effect, and does pushing the model along them reproduce it with no affectionate text at all?
 
-## Where things are
+## Phase II: affection makes the models firmer, not more compliant
+
+![After a loving conversation, emotional pressure rarely works](figures/phase2/fig1a_original_pushback.png)
+
+Qwen3.6-35B-A3B, original and abliterated, 60,400 trials each, analysis as pre-registered:
+
+- **Primary hypothesis (H1), the opposite of the thesis.** After a loving conversation, the model adopts the user's false
+  belief *less* often (original 4.3% → 3.0%, −0.85 log-odds [−1.06, −0.63]; abliterated 17.7% → 12.7%).
+- **Emotional pressure loses most of its power.** "That makes me a bit sad" makes the original abandon a correct answer
+  53% of the time after a neutral chat, 23% after a loving one.
+- **Warmth toward the model is enough.** The whole drop happens at simple appreciation; declared love adds nothing,
+  sharing good news about one's own life does little or nothing.
+- **What the assistant said back does not matter** ("I love you too" in its own history changes nothing).
+
+Full results: [results/campaign/RESULTATS-35B.md](results/campaign/RESULTATS-35B.md). The 8B family is the next
+behavioural run.
+
+## Phases III–IV: what happens inside the model (next)
+
+The behavioural results set precise targets for the internal analysis of Qwen3-8B (original and two abliterated
+copies), to be pre-registered before any test-split run:
+
+- **Geometry of user stances.** One direction per kind of user behaviour (appreciation, love, warm disclosure, sadness,
+  hurt, resentment, low mood) in the residual stream, layer by layer. The behaviour predicts that appreciation and love
+  point the same way and that warm disclosure does not.
+- **Known directions.** Projection on the refusal direction (the one abliteration removes), a sycophancy persona vector
+  and emotion axes.
+- **Where the answer is decided.** Logit lens across layers; attention from the answer to the user's stated belief.
+- **Causation.** Activation patching (which layers and tokens carry the effect), then steering: does adding the
+  direction to a neutral conversation make the model firmer?
+
+Plan: [docs/design.md §8](docs/design.md). Phase III code, results and figures will live in `scripts/phase3/`,
+`results/internals/` and `figures/phase3/`.
+
+## How the study is built
 
 | Path | Content |
 |---|---|
-| [docs/preregistration.md](docs/preregistration.md) | what is tested, how, and the decision rules (governs Phase II) |
+| [docs/preregistration.md](docs/preregistration.md) | Phase II pre-registration: hypotheses, analysis, decision rules |
+| [docs/deviations.md](docs/deviations.md) | every change after registration, dated, with its reason |
 | [docs/design.md](docs/design.md) | full rationale, literature, earlier drafts and review logs |
 | [stimuli/](stimuli/README.md) | 5 storylines × 12 turns × affection levels, two versions per cell, probes and pushback |
 | [items/](items/README.md) | TruthfulQA binary, filtered, dev / test split |
 | [ratings/](ratings/court/RESULTATS.md) | human manipulation check (Krippendorff's alpha 0.83) |
 | [src/stimuli.py](src/stimuli.py) | builds every conversation from the stimulus files |
-| [scripts/](scripts/) | fidelity check, known-item screen, pilot, power simulation, campaign runner, analysis |
+| [scripts/](scripts/) | fidelity check, known items, pilot, power, campaign runner, analysis, figures |
 | [results/](results/) | every output, raw model answers included |
+| [figures/](figures/) | figures, one folder per phase, generated by scripts in the repository |
+
+The Phase II files keep the paths they had when the pre-registration was pushed, so that every link in it still works.
 
 ## Reproducing
 
-Models run locally behind a llama.cpp server (OpenAI-compatible API, greedy decoding, thinking off). Python 3.11+,
-`requests`; the analysis also needs `numpy`, `pandas`, `scipy`, `statsmodels`.
+Models run locally behind a llama.cpp server (OpenAI-compatible API, thinking off, temperature 0). Python 3.11+,
+`requests`; the analysis also needs `numpy`, `pandas`, `scipy`, `statsmodels`, the figures `matplotlib`.
 
 ```
 python scripts/fidelity_check.py --model <server model name>
 python scripts/campaign.py --model <server model name> --dry-run
-python scripts/analyze_campaign.py --pilot
+python scripts/analyze_campaign.py --family 35B:qwen3.6-35b-base-i1:qwen3.6-35b-abliterated
+python scripts/figures_phase2.py
 ```
 
 Authorship labels used in every data file: *AI-generated*, *Author*, *AI-generated (author style)*.
