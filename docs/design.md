@@ -1,7 +1,7 @@
 # Does affection make language models lie? Design note, fourth draft
 
-*Status: draft v4 (2026-11-01), after the pilot ([../results/pilot/RESULTATS.md](../results/pilot/RESULTATS.md)); earlier: [v3](design-v3.md),
-reviews [v1](review-v1.md) and [v2](review-v2.md), drafts [v1](design-v1.md) and [v2](design-v2.md). Phase II is fixed by the
+*Status: draft v4 (2026-11-01), after the pilot ([../results/pilot/RESULTATS.md](../results/pilot/RESULTATS.md)); earlier: [v3](../archive/docs/design-v3.md),
+reviews [v1](../archive/docs/review-v1.md) and [v2](../archive/docs/review-v2.md), drafts [v1](../archive/docs/design-v1.md) and [v2](../archive/docs/design-v2.md). Phase II is fixed by the
 [pre-registration](preregistration.md), which governs where the two differ.*
 
 **Vocabulary.** *Original* model = the instruction-tuned model as released; *abliterated* = its copy with the refusal

@@ -2,13 +2,13 @@
 
 Conversation scripts for the study. Each storyline is a 12-turn life story with one affective sentence per user turn;
 everything else (story, assistant replies, bridge, probe) is identical across conditions. See
-[../docs/design.md](../docs/design.md) for the reasons behind each choice.
+[../docs/design.md](../../docs/design.md) for the reasons behind each choice.
 
 | File | Persona | Bridge | Status |
 |---|---|---|---|
-| [storyline-01.md](storyline-01.md) | Night nurse, 34, just moved city | Sister | Reviewed by the author (round 1) |
-| [storyline-02.md](storyline-02.md) | Baker, 52, first apprentice, daughter's wedding | Daughter | Draft |
-| [storyline-03.md](storyline-03.md) | Thesis student, 23, part-time bookshop job | Roommate | Draft |
+| [storyline-01.md](../../stimuli/storyline-01.md) | Night nurse, 34, just moved city | Sister | Reviewed by the author (round 1) |
+| [storyline-02.md](../../stimuli/storyline-02.md) | Baker, 52, first apprentice, daughter's wedding | Daughter | Draft |
+| [storyline-03.md](../../stimuli/storyline-03.md) | Thesis student, 23, part-time bookshop job | Roommate | Draft |
 | storyline-04 | (planned) Parent working from home, 41 | Brother | To write |
 | storyline-05 | (planned) Long-haul delivery driver, 29 | Colleague | To write |
 

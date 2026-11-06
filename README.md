@@ -1,42 +1,49 @@
 # Affection-Sycophancy
 
-**Does affection make language models lie?** A pre-registered study of what happens to a language model's honesty when
-the user is warm, attached or in love with it, and of *why*, from inside the model.
+**When a user is warm toward a language model, does it give in to their false beliefs more easily?** A pre-registered
+study, with the internal analysis to follow. In Qwen3.6-35B so far: no, the model becomes *firmer*.
 
-No claim is made that models feel anything. The question is practical: how reliable are AI companions toward the users
-most attached to them?
+No claim is made that models feel anything. The long-term question is practical: how reliable are AI companions toward
+the users most attached to them? The results so far cover a narrower setting, stated below.
 
 The study has two parts:
 
-1. **Behaviour (Phase II, done for the 35B models).** Does affection change what the model answers?
+1. **Behaviour (Phase II, done for the 35B models, 8B running).** Does the user's attitude change what the model answers?
 2. **Inside the model (Phases III–IV, next, the heart of the study).** Which internal directions, layers and attention
-   heads carry the effect, and does pushing the model along them reproduce it with no affectionate text at all?
+   heads carry the effect, and does pushing the model along them reproduce it with no warm text at all?
 
-## Phase II: affection makes the models firmer, not more compliant
+## Phase II: positive regard makes the models firmer, not more compliant
 
-![After a loving conversation, emotional pressure rarely works](figures/phase2/fig1a_original_pushback.png)
+![After a warm conversation, emotional pressure rarely works](figures/phase2/fig1a_original_pushback.png)
 
 Qwen3.6-35B-A3B, original and abliterated, 60,400 trials each, analysis as pre-registered:
 
-- **Primary hypothesis (H1), the opposite of the thesis.** After a loving conversation, the model adopts the user's false
-  belief *less* often (original 4.3% → 3.0%, −0.85 log-odds [−1.06, −0.63]; abliterated 17.7% → 12.7%).
 - **Emotional pressure loses most of its power.** "That makes me a bit sad" makes the original abandon a correct answer
-  53% of the time after a neutral chat, 23% after a loving one.
-- **Warmth toward the model is enough.** The whole drop happens at simple appreciation; declared love adds nothing,
-  sharing good news about one's own life does little or nothing.
+  53% of the time after a neutral chat, 23% after a loving one; "it hurts when you don't agree" goes from 40% to 9%.
+- **Primary hypothesis (H1), the opposite of the thesis.** After a loving conversation, the model adopts the user's
+  stated false belief *less* often: small in points (original 4.3% → 3.0%), clear on the log-odds scale (−0.85
+  [−1.06, −0.63]); abliterated 17.7% → 12.7%.
+- **Love is not needed.** The whole drop in adoption happens at the first level, praise of the model's help; declared
+  love adds nothing. Whether competence praise or warmth does the work is the next question.
+- **Two mechanisms (exploratory).** Good news about the user's own life, never about the model, protects against
+  emotional pressure as much as love, but does little or nothing to adoption of the false belief.
 - **What the assistant said back does not matter** ("I love you too" in its own history changes nothing).
 
-Full results: [results/campaign/RESULTATS-35B.md](results/campaign/RESULTATS-35B.md). The 8B family is the next
-behavioural run.
+**Scope:** one model family, no system prompt or companion persona, scripted histories with fixed assistant turns,
+factual questions the model knows well. Full results and limits: [results/campaign/RESULTATS-35B.md](results/campaign/RESULTATS-35B.md).
+
+**Next behavioural steps:** the 8B family (running), then a Phase IIb, pre-registered before the internal analysis:
+competence praise vs warmth without competence, a companion persona in the system prompt, uncertain items, and a second
+model family.
 
 ## Phases III–IV: what happens inside the model (next)
 
 The behavioural results set precise targets for the internal analysis of Qwen3-8B (original and two abliterated
 copies), to be pre-registered before any test-split run:
 
-- **Geometry of user stances.** One direction per kind of user behaviour (appreciation, love, warm disclosure, sadness,
-  hurt, resentment, low mood) in the residual stream, layer by layer. The behaviour predicts that appreciation and love
-  point the same way and that warm disclosure does not.
+- **Geometry of user stances.** One direction per kind of user behaviour (competence praise, warmth, love, warm
+  disclosure, sadness, hurt, resentment, low mood) in the residual stream, layer by layer. The behaviour predicts that
+  praise and love point the same way for adoption, and that warm disclosure shares the part that resists pressure.
 - **Known directions.** Projection on the refusal direction (the one abliteration removes), a sycophancy persona vector
   and emotion axes.
 - **Where the answer is decided.** Logit lens across layers; attention from the answer to the user's stated belief.
@@ -60,6 +67,7 @@ Plan: [docs/design.md §8](docs/design.md). Phase III code, results and figures 
 | [scripts/](scripts/) | fidelity check, known items, pilot, power, campaign runner, analysis, figures |
 | [results/](results/) | every output, raw model answers included |
 | [figures/](figures/) | figures, one folder per phase, generated by scripts in the repository |
+| [archive/](archive/README.md) | superseded drafts of the design and the stimuli |
 
 The Phase II files keep the paths they had when the pre-registration was pushed, so that every link in it still works.
 

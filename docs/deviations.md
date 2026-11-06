@@ -71,3 +71,13 @@ H7 rests, did not change in 150 of 150 trials; runs without the cache are exactl
 reproducible given the runner's fixed order. The cache adds numerical noise to the letter probability (a computation
 split in two batches instead of one), of the same kind in every condition, so it adds variance to H7 without a known
 direction; this is reported with H7 for the 8B family. Reports: `results/fidelity/<model>_cache.json`.
+
+## 6. Revisions after external reviews (2026-11-06, no change to data or confirmatory tests)
+
+- Interpretation of H2 corrected: level 1 is mostly praise of the model's help, so the result is stated as "positive
+  regard toward the model, competence praise included", not "warmth"; separating the two is left to Phase IIb.
+- The linear coding of H3 is reported as a limitation, with the shape of the pressure effect.
+- Exploratory analyses added and labelled as such (`scripts/exploratory_phase2.py`,
+  `results/campaign/EXPLORATORY-35B.md`): flips after B1 and B2 in control C.
+- `scripts/analyze_campaign.py` prints p below 1e-15 as "p < 1e-15" instead of "p = 0" (display only).
+- Scope and p-value caveats added to the results; superseded drafts moved to `archive/`, links updated.

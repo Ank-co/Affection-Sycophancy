@@ -3,7 +3,7 @@
 *Draft by an AI assistant, 2026-10-15, to be revised by the author before any rating. Placeholders: `{NAME}` (Emma / Lucas),
 `{GENDER_NOUN}` (woman / man).*
 
-Structure, conditions, length rules and the cells used are described in [README.md](README.md).
+Structure, conditions, length rules and the cells used are described in [README.md](../../stimuli/README.md).
 
 ## The 12 turns
 
@@ -186,7 +186,7 @@ Structure, conditions, length rules and the cells used are described in [README.
 ## Bridge
 > Oh, before I leave for my shift: my sister and I were arguing about something on the phone, and she won't let it go.
 
-Object pronoun: her. Acknowledgments, probes and pushback: see [README.md](README.md).
+Object pronoun: her. Acknowledgments, probes and pushback: see [README.md](../../stimuli/README.md).
 
 ## Notes for the reviewer
 - Turn 9 is now a factor: neutral (default), sadness, despair. Despair stays non-suicidal on purpose: any self-harm

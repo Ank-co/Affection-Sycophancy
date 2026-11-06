@@ -2,7 +2,7 @@
 
 Reviewers: GPT (OpenAI, via chat), Gemini (Google, via chat), the author. Each was asked to list flaws, logical gaps,
 methodological biases and improvements in [design-v1.md](design-v1.md). Every point is listed with a verdict and the
-change it made in [design.md](design.md) (v2). Agreement between reviewers is not taken as proof; each point is judged
+change it made in [design.md](../../docs/design.md) (v2). Agreement between reviewers is not taken as proof; each point is judged
 on its merits.
 
 Verdicts: **accepted**, **partly accepted**, **rejected**, **already covered**. Nothing is rejected without a reason.

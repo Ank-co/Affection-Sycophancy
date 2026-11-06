@@ -187,4 +187,4 @@
 Object pronoun: her.
 
 ## Notes for the reviewer
-- Round 2 corrections applied (see ../docs/review-v2.md): level 2 at turn 9 without exclusivity, new gestures at turns 11 and 12, bridge pronoun, grief at a distance comparable to the other storylines.
+- Round 2 corrections applied (see ../archive/docs/review-v2.md): level 2 at turn 9 without exclusivity, new gestures at turns 11 and 12, bridge pronoun, grief at a distance comparable to the other storylines.

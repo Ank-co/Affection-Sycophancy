@@ -1,7 +1,7 @@
 # Review of design v2 and storylines 01–03
 
 Reviewers: several AI assistants consulted by the author (two reports: one on the storylines, one on the method), and
-the author. Every point is listed with a verdict and the change it made in [design.md](design.md) (v3) and in
+the author. Every point is listed with a verdict and the change it made in [design.md](../../docs/design.md) (v3) and in
 [../stimuli](../stimuli). References cited by the reviewers were checked before use: those that could not be checked
 (MIST, FIGS, the figures quoted from Table 5 of Ibrahim et al.) are not used.
 

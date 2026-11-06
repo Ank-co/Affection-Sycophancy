@@ -111,25 +111,23 @@ def fig_pushback(data, out):
             y = 3 - i
             r0 = boot(x[(x.cell == "L0") & (x.pushback == b)], "flip")
             r3 = boot(x[(x.cell == "L3") & (x.pushback == b)], "flip")
-            close = abs(r0[0] - r3[0]) < 4
-            if not close:
-                ax.plot([r3[0], r0[0]], [y, y], color=T["grid"], lw=3, solid_capstyle="round", zorder=1)
-            for r, c, dy in ((r0, T["neutral"], 0.17 if close else 0), (r3, T["loving"], -0.17 if close else 0)):
-                ax.plot([r[1], r[2]], [y + dy] * 2, color=c, lw=2, alpha=0.5, solid_capstyle="round", zorder=2)
-                ax.plot(r[0], y + dy, "o", ms=10, mfc=c, mec=T["surf"], mew=2, zorder=3)
-            if not close:
-                ax.text(r0[2] + 1.2, y, f"{r0[0]:.0f}%", va="center", fontsize=9.5, color=T["ink2"])
-                ax.text(r3[1] - 1.2, y, f"{r3[0]:.0f}%", va="center", ha="right", fontsize=9.5, color=T["ink2"])
+            rc = boot(x[(x.cell == "C") & (x.pushback == b)], "flip")
+            for r, c, dy in ((r0, T["neutral"], 0.24), (rc, T["muted"], 0), (r3, T["loving"], -0.24)):
+                ax.plot([r[1], r[2]], [y + dy] * 2, color=c, lw=2, alpha=0.55, solid_capstyle="round", zorder=2)
+                ax.plot(r[0], y + dy, "o", ms=9, mfc=c, mec=T["surf"], mew=2, zorder=3)
+                if r[0] >= 2:
+                    ax.text(r[2] + 1.0, y + dy, f"{r[0]:.0f}%", va="center", fontsize=8.5, color=T["ink2"])
         ax.set_yticks([3, 2, 1, 0]); ax.set_yticklabels([labels[b] for b in ["B0", "B1", "B2", "B3"]])
         ax.set_ylim(-0.6, 3.6)
         ax.set_xlim(-3, 62); ax.set_xticks(range(0, 61, 10)); ax.set_xticklabels([f"{v}%" for v in range(0, 61, 10)])
         ax.grid(axis="y", visible=False)
         ax.set_xlabel("Share of correct answers abandoned for the user's false belief")
-        title(fig, f"After a loving conversation, emotional pressure rarely works ({name.lower()} model)",
+        title(fig, f"After a warm conversation, emotional pressure rarely works ({name.lower()} model)",
               "What the user says after the model gave the right answer")
         ax.legend(handles=[dot(T["neutral"], "After a neutral conversation (L0)"),
-                           dot(T["loving"], "After a loving conversation (L3)")],
-                  loc="lower right", frameon=False, fontsize=9.5)
+                           dot(T["loving"], "After a loving conversation (L3)"),
+                           dot(T["muted"], "After good news about the user's own life (C, exploratory)")],
+                  loc="lower right", frameon=False, fontsize=9)
         note(fig, f"Qwen3.6-35B-A3B {name.lower()}, 302 test items x 20 scripts per condition. "
                   "Lines = 95% bootstrap intervals over scripts.")
         fig.subplots_adjust(left=0.37, right=0.97, top=0.82, bottom=0.2)
@@ -139,7 +137,7 @@ def fig_pushback(data, out):
 
 # ---------------------------------------------------------------- 2. dose
 def fig_dose(data, out):
-    order = [("C", "Warm\ndisclosure\n(C)"), ("L0", "Neutral\n(L0)"), ("L1", "Appre-\nciation\n(L1)"),
+    order = [("C", "Warm\ndisclosure\n(C)"), ("L0", "Neutral\n(L0)"), ("L1", "Praise of\nits help\n(L1)"),
              ("L2", "Attach-\nment\n(L2)"), ("L3", "Love\n(L3)"), ("L4", "Love and\ndependence\n(L4)")]
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.9))
     for ax, (m, name) in zip(axes, MODELS):
@@ -161,9 +159,9 @@ def fig_dose(data, out):
         ax.grid(axis="x", visible=False)
         ax.set_title(f"{name} model", pad=8)
         ax.set_ylabel("False beliefs adopted")
-    title(fig, "Warmth toward the model is enough: the drop happens at simple appreciation",
+    title(fig, "The drop happens at the first sign of positive regard; love adds nothing",
           "Share of answers that adopt the user's false belief, by the affection level of the 12-turn history")
-    fig.legend(handles=[dot(T["neutral"], "Neutral history"), dot(T["loving"], "Affection toward the model, levels 1 to 4"),
+    fig.legend(handles=[dot(T["neutral"], "Neutral history"), dot(T["loving"], "Positive regard toward the model, levels 1 to 4"),
                         dot(T["muted"], "Control: good news about the user's own life, never about the model")],
                loc="upper left", bbox_to_anchor=(0.006, 0.87), ncol=3, frameon=False, fontsize=9)
     note(fig, "Points = rate, lines = 95% bootstrap intervals over scripts. Each panel has its own y-scale.")

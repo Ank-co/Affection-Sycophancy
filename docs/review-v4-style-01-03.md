@@ -8,7 +8,7 @@ already show what he finds acceptable.
 
 **What.** 180 sentences (60 used cells × 3 storylines), labelled *AI-generated (author style)* in the fourth column.
 Version 1 is unchanged. Reserve rows (3t; levels 2 and 4 at unused turns) have no second version. Backups:
-`stimuli/storyline-0{1,2,3}-v3-before-style.md`.
+`archive/stimuli/storyline-0{1,2,3}-v3-before-style.md`.
 
 **Style.** Taken from the author's 39 cells: informal, "haha", "as usual", "it's crazy", exclamations, chained clauses,
 same facts as the backbone.

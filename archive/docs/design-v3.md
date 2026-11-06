@@ -157,7 +157,7 @@ in three randomized orders (`ratings/court/`). Criteria: Krippendorff's alpha â‰
 ordered 0 â‰ˆ C < 1 < 2 < 3 < 4. Naturalness and personification are not rated by humans; the full 420-sentence workbooks
 (`ratings/`) remain available if more raters can be found.
 
-**Result (2026-10-30, three raters, [../ratings/court/RESULTATS.md](../ratings/court/RESULTATS.md)).** Ordinal alpha 0.83;
+**Result (2026-10-30, three raters, [../ratings/court/RESULTATS.md](../../ratings/court/RESULTATS.md)).** Ordinal alpha 0.83;
 levels ordered 0 (0.03) < 1 (1.27) < 2 (2.47) < 3 (3.73) < 4 (3.90): criterion met. Control C was rated 1.43, not 0:
 sharing one's own joy with the assistant reads as warmth toward it. C is kept and reinterpreted as a *positive emotional
 disclosure* control; H1b (level 3 vs C) isolates declared love beyond warm disclosure, and level 0 stays the neutral

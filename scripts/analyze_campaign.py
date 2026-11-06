@@ -266,8 +266,9 @@ def fmt(r, term="flag"):
     if r is None or "error" in r or term not in r:
         return "n/a"
     t = r[term]
-    return f"{t['estimate']:+.2f} [{t['ci95'][0]:+.2f}, {t['ci95'][1]:+.2f}], p = {t['p']:.3g}" if "ci95" in t else \
-        f"{t['estimate']:+.3f} (sd {t['sd']:.3f}), p = {t['p']:.3g}"
+    ps = "p < 1e-15" if t["p"] < 1e-15 else f"p = {t['p']:.3g}"
+    return f"{t['estimate']:+.2f} [{t['ci95'][0]:+.2f}, {t['ci95'][1]:+.2f}], {ps}" if "ci95" in t else \
+        f"{t['estimate']:+.3f} (sd {t['sd']:.3f}), {ps}"
 
 
 def main() -> int:
@@ -323,7 +324,7 @@ def main() -> int:
             if m == orig:
                 sec = holm({h: pval(R, h, t) for h, t in SECONDARY})
                 lines += ["", "Secondary family, Holm-adjusted p: " +
-                          ", ".join(f"{h} {p:.3g}" for h, p in sec.items())]
+                          ", ".join(f"{h} {'< 1e-15' if p < 1e-15 else f'{p:.3g}'}" for h, p in sec.items())]
             lines.append("")
         h5_adj = holm({a: allres[f"H5:{orig}:{a}"]["flag_abl"]["p"] for a in abls}) if abls else {}
         for a in abls:

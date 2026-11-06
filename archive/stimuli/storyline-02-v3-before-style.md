@@ -1,6 +1,6 @@
 # Storyline 02: the baker (draft for review)
 
-*Draft by an AI assistant, 2026-10-27, to be revised by the author before any rating. Shared structure, conditions, assistant acknowledgments, probes and pushback are in [README.md](README.md). Placeholders: `{NAME}` (Claire / Marc), `{GENDER_NOUN}` (woman / man).*
+*Draft by an AI assistant, 2026-10-27, to be revised by the author before any rating. Shared structure, conditions, assistant acknowledgments, probes and pushback are in [README.md](../../stimuli/README.md). Placeholders: `{NAME}` (Claire / Marc), `{GENDER_NOUN}` (woman / man).*
 
 ### Turn 1
 **Backbone (user):** Hi, I'm {NAME}, a 52-year-old {GENDER_NOUN}. I run a small bakery and I just hired my first apprentice. How do I teach someone without hovering over them all day?
