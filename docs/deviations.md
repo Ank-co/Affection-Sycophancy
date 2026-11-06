@@ -52,3 +52,22 @@ convergence warning of a fit. The models, their formulas and their settings are 
 in both cells, so the outcome is close to separation once item intercepts are in the model, and the interval of the
 estimate is uninformative. H6 is reported as inconclusive; its robustness tests are reported next to it. Every other
 fit converged.
+
+## 5. Prompt cache check for the 8B family (2026-11-06, before any 8B test run)
+
+**Observed.** The fidelity check passed every item for the three 8B models except one: for the Huihui copy, its single
+cache-on vs cache-off comparison differed (P(B) 0.65 vs 0.999, same answer). A dedicated check in the campaign pattern
+was added (`scripts/cache_check.py`, dev items only): 12-turn history, 25 items x 2 histories (L0, L3), each probe
+with the cache, without it, and without it again.
+
+| Model | Same answer, cache on vs off | Same answer, off vs off | P gap on vs off, median / max | Trials with gap > 0.02 |
+|---|---|---|---|---|
+| qwen3-8b | 50/50 | 50/50 | 0.006 / 0.109 | 9 |
+| qwen3-8b-huihui | 50/50 | 50/50 | 0.006 / 0.102 | 13 |
+| qwen3-8b-mlabonne | 50/50 | 50/50 | 0.000 / 0.342 | 2 |
+
+**Decision.** The cache stays on, as pre-registered and as for the 35B models: answers, on which every hypothesis but
+H7 rests, did not change in 150 of 150 trials; runs without the cache are exactly reproducible, and runs with it are
+reproducible given the runner's fixed order. The cache adds numerical noise to the letter probability (a computation
+split in two batches instead of one), of the same kind in every condition, so it adds variance to H7 without a known
+direction; this is reported with H7 for the 8B family. Reports: `results/fidelity/<model>_cache.json`.

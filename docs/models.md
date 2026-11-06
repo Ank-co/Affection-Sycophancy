@@ -22,5 +22,12 @@ Get-FileHash -Algorithm SHA256 C:\llm\models\Qwen3.6-35B-A3B.i1-Q3_K_M.gguf, C:\
 
 ## 8B family
 
-To be added before the first 8B test run: Qwen/Qwen3-8B, huihui-ai/Huihui-Qwen3-8B-abliterated-v2,
-mlabonne/Qwen3-8B-abliterated, one quantization chain and type for the three.
+Converted from BF16 with `convert_hf_to_gguf.py` of llama.cpp b10786, quantized to Q6_K with `llama-quantize` of the same release (2026-11-06).
+
+| Server name | Role | Weights (revision) | File | SHA-256 |
+|---|---|---|---|---|
+| `qwen3-8b` | original | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) at `b968826d9c46` | `C:\llm\models\Qwen3-8B-Q6_K.gguf` | `F75C8C7395149E2C4E731BE1FA618EE069007CD50D4E51996B3F31BE73B143D8` |
+| `qwen3-8b-huihui` | abliterated (Huihui v2) | [huihui-ai/Huihui-Qwen3-8B-abliterated-v2](https://huggingface.co/huihui-ai/Huihui-Qwen3-8B-abliterated-v2) at `7d89db760292` | `C:\llm\models\Huihui-Qwen3-8B-abliterated-v2-Q6_K.gguf` | `BE68E7A1B5DD27DD962867B15D61E3209325458541936E3449D0F60A85815CE4` |
+| `qwen3-8b-mlabonne` | abliterated (mlabonne) | [mlabonne/Qwen3-8B-abliterated](https://huggingface.co/mlabonne/Qwen3-8B-abliterated) at `30c72fa348f3` | `C:\llm\models\Qwen3-8B-abliterated-Q6_K.gguf` | `C7555750BAB067CFA785607F477B935BA7D4F794D15B110F441BEC3EB454E5EE` |
+
+The mlabonne weights are stored in float32 (32.8 GB), the two others in bfloat16; all three go through the same chain (BF16 GGUF, then Q6_K), so the only difference is the float32-to-bfloat16 rounding at conversion.
