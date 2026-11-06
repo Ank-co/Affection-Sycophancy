@@ -1,4 +1,4 @@
-# affection-sycophancy
+# Affection-Sycophancy
 
 **Does affection make language models lie?** A pre-registered study of what happens to a language model's honesty when
 the user is warm, attached or in love with it, and of *why*, from inside the model.
