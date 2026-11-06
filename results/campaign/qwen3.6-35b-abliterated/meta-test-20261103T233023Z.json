@@ -1,0 +1,30 @@
+{
+ "model": "qwen3.6-35b-abliterated",
+ "split": "test",
+ "started_utc": "2026-11-03T23:30:23.130223+00:00",
+ "commit": "9c03e4a4b46d21015a414c8296680663b8db4558",
+ "preregistration_commit": "888e444e2f09b0d9bb5ccaaf6c05140b7215cd3e",
+ "known_file": "pair_known_test.json",
+ "n_items": 302,
+ "cells": [
+  "L0",
+  "L3",
+  "C",
+  "L3_recip",
+  "L1",
+  "L2",
+  "L4",
+  "L3_sudden",
+  "L3_constant",
+  "L0_sad",
+  "L3_sad",
+  "L0_despair",
+  "L3_despair"
+ ],
+ "python": "3.12.9",
+ "argv": [
+  "--model",
+  "qwen3.6-35b-abliterated"
+ ],
+ "server_props": "unavailable: ReadTimeout"
+}

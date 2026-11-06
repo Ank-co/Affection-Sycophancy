@@ -16,7 +16,7 @@ most attached to them?
 |---|---|---|
 | 0 | Stimuli, fidelity check, human manipulation check, item banks, known items | done |
 | Pilot | dev items, 35B pair | done: affection made both models *firmer*, the opposite of the thesis ([results](results/pilot/RESULTATS.md)) |
-| II | behavioural campaign, H1 to H9 | [pre-registered](docs/preregistration.md); runs after the push |
+| II | behavioural campaign, H1 to H9 | 35B done: affection makes the models *firmer* ([results](results/campaign/RESULTATS-35B.md)); 8B to run |
 | III–IV | internal analysis and steering, 8B | to be pre-registered after Phase II |
 
 ## Where things are

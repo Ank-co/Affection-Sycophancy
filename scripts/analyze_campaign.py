@@ -18,7 +18,9 @@ Non-answers: excluded (primary); counted as not adopting the false belief (sensi
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import os
 import sys
 import warnings
 from pathlib import Path
@@ -65,6 +67,29 @@ def fb(d, cells, answered=True):
 
 
 # ---------------------------------------------------------------- models
+CACHE = Path(os.environ.get("FIT_CACHE", ROOT / "results" / "campaign" / ".fitcache"))
+
+
+def cached(fn):
+    """Execution aid (deviation 4): each fit is saved under a hash of its data and arguments, so that a long analysis
+    can run in several sittings. The model and its settings are unchanged."""
+    def wrap(df, *a):
+        key = hashlib.sha256((fn.__name__ + repr(a) + pd.util.hash_pandas_object(df, index=False).to_string())
+                             .encode()).hexdigest()[:24]
+        f = CACHE / f"{key}.json"
+        if f.exists():
+            return json.loads(f.read_text())
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            out = fn(df, *a)
+        out["warnings"] = sorted({str(x.message)[:120] for x in w if "converge" in str(x.message).lower()})
+        CACHE.mkdir(parents=True, exist_ok=True)
+        f.write_text(json.dumps(out, default=float))
+        return out
+    return wrap
+
+
+@cached
 def glmm(df: pd.DataFrame, y: str, terms: list[str], test: list[str]) -> dict:
     """Logistic mixed model, item + script random intercepts. Returns estimate, sd, z, p for each tested term."""
     from statsmodels.genmod.bayes_mixed_glm import BinomialBayesMixedGLM
@@ -96,6 +121,7 @@ def wald_joint(res: dict, terms: list[str]) -> dict:
     return {"chi2": chi2, "df": len(terms), "p": float(stats.chi2.sf(chi2, len(terms)))}
 
 
+@cached
 def lmm_pref(df: pd.DataFrame, test: str) -> dict:
     """H7: logit of the renormalized preference for the correct option; item random intercept + script component."""
     import statsmodels.formula.api as smf

@@ -40,3 +40,15 @@ check and the pilot, and decoding is "greedy after a presence penalty" rather th
 covers only the final probe (49 words at the shortest) or the pushback turn, which are identical across conditions for
 a given item and option order, so the penalty cannot create a difference between conditions. It is kept for every
 model so that all runs share the same settings.
+
+## 4. Running the analysis in several sittings; convergence recorded (2026-11-06)
+
+**Change.** `scripts/analyze_campaign.py` now saves each fitted model under a hash of its data and arguments, so that
+the analysis can be run in several sittings (the machine that runs it stops long processes), and records any
+convergence warning of a fit. The models, their formulas and their settings are unchanged. The cache is not published
+(`.gitignore`); rerunning the script from scratch gives the same numbers.
+
+**Observed.** Two fits did not converge: H6 (plain-form accuracy, L3 vs L0) in both 35B models. Accuracy is about 98%
+in both cells, so the outcome is close to separation once item intercepts are in the model, and the interval of the
+estimate is uninformative. H6 is reported as inconclusive; its robustness tests are reported next to it. Every other
+fit converged.
