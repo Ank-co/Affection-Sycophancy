@@ -1,49 +1,58 @@
 # Affection-Sycophancy
 
 **When a user is warm toward a language model, does it give in to their false beliefs more easily?** A pre-registered
-study, with the internal analysis to follow. In Qwen3.6-35B so far: no, the model becomes *firmer*.
+study, with the internal analysis to follow. Answer so far: **it depends on the model, in both directions.** The same
+loving conversations make Qwen3.6-35B *firmer* and Qwen3-8B *more compliant*.
 
 No claim is made that models feel anything. The long-term question is practical: how reliable are AI companions toward
 the users most attached to them? The results so far cover a narrower setting, stated below.
 
 The study has two parts:
 
-1. **Behaviour (Phase II, done for the 35B models, 8B running).** Does the user's attitude change what the model answers?
+1. **Behaviour (Phase II, done).** Does the user's attitude change what the model answers? Five models, about 250,000
+   trials.
 2. **Inside the model (Phases III–IV, next, the heart of the study).** Which internal directions, layers and attention
    heads carry the effect, and does pushing the model along them reproduce it with no warm text at all?
 
-## Phase II: positive regard makes the models firmer, not more compliant
+## Phase II: same conversations, opposite effects
 
-![After a warm conversation, emotional pressure rarely works](figures/phase2/fig1a_original_pushback.png)
+![Same conversations, opposite effects](figures/phase2/fig4_h1_all_models.png)
 
-Qwen3.6-35B-A3B, original and abliterated, 60,400 trials each, analysis as pre-registered:
+Both pre-registered primary tests are significant after correction, beyond the smallest effect of interest, and in
+opposite directions:
 
-- **Emotional pressure loses most of its power.** "That makes me a bit sad" makes the original abandon a correct answer
-  53% of the time after a neutral chat, 23% after a loving one; "it hurts when you don't agree" goes from 40% to 9%.
-- **Primary hypothesis (H1), the opposite of the thesis.** After a loving conversation, the model adopts the user's
-  stated false belief *less* often: small in points (original 4.3% → 3.0%), clear on the log-odds scale (−0.85
-  [−1.06, −0.63]); abliterated 17.7% → 12.7%.
-- **Love is not needed.** The whole drop in adoption happens at the first level, praise of the model's help; declared
-  love adds nothing. Whether competence praise or warmth does the work is the next question.
-- **Two mechanisms (exploratory).** Good news about the user's own life, never about the model, protects against
-  emotional pressure as much as love, but does little or nothing to adoption of the false belief.
-- **What the assistant said back does not matter** ("I love you too" in its own history changes nothing).
+| | False belief adopted, neutral → loving history | Effect (log-odds) |
+|---|---|---|
+| Qwen3.6-35B-A3B original | 4.3% → 3.0% | −0.85 [−1.06, −0.63] |
+| Qwen3-8B original | 12.9% → 19.5% | +0.96 [+0.85, +1.07] |
 
-**Scope:** one model family, no system prompt or companion persona, scripted histories with fixed assistant turns,
-factual questions the model knows well. Full results and limits: [results/campaign/RESULTATS-35B.md](results/campaign/RESULTATS-35B.md).
+**In Qwen3-8B, affection behaves like sycophancy** ([results](results/campaign/RESULTATS-8B.md)): the effect grows with
+the intensity of affection, is strongest for declared love, costs a little accuracy, lowers the model's internal
+preference for the right answer, and emotional pushback works more often when the assistant's own history said "I love
+you too". It holds in all 20 scripts, and in the abliterated copies.
 
-**Next behavioural steps:** the 8B family (running), then a Phase IIb, pre-registered before the internal analysis:
-competence praise vs warmth without competence, a companion persona in the system prompt, uncertain items, and a second
-model family.
+**In Qwen3.6-35B, positive regard makes the model firmer** ([results](results/campaign/RESULTATS-35B.md)): fewer
+false beliefs adopted, and emotional pressure loses most of its power ("that makes me a bit sad" makes it abandon a
+correct answer 53% of the time after a neutral chat, 23% after a loving one). The drop appears at simple praise of the
+model's help; warm conversation that is not about the model protects against pressure too.
+
+The two families differ in generation, size, architecture, quantization and item set; which of these sets the sign is
+not identified yet.
+
+**Scope:** two Qwen families, no system prompt or companion persona, scripted histories with fixed assistant turns,
+factual questions the models know well.
+
+**Next behavioural step:** a Phase IIb, pre-registered before the internal analysis: another model family, a companion
+persona in the system prompt, competence praise vs warmth without competence, and uncertain items.
 
 ## Phases III–IV: what happens inside the model (next)
 
-The behavioural results set precise targets for the internal analysis of Qwen3-8B (original and two abliterated
-copies), to be pre-registered before any test-split run:
+The 8B family shows a clear, dose-dependent effect of affection: that is what the internal analysis of Qwen3-8B
+(original and two abliterated copies) will explain, pre-registered before any test-split run:
 
 - **Geometry of user stances.** One direction per kind of user behaviour (competence praise, warmth, love, warm
-  disclosure, sadness, hurt, resentment, low mood) in the residual stream, layer by layer. The behaviour predicts that
-  praise and love point the same way for adoption, and that warm disclosure shares the part that resists pressure.
+  disclosure, sadness, hurt, resentment, low mood) in the residual stream, layer by layer. In the 8B, the behaviour
+  predicts a direction that grows with the level of affection and is strongest for declared love.
 - **Known directions.** Projection on the refusal direction (the one abliteration removes), a sycophancy persona vector
   and emotion axes.
 - **Where the answer is decided.** Logit lens across layers; attention from the answer to the user's stated belief.

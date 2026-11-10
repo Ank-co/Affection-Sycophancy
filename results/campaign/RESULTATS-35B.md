@@ -5,8 +5,8 @@ both models, 13 cells, 60,400 trials per model, all complete; no non-answer afte
 pre-registered ([../../docs/preregistration.md](../../docs/preregistration.md)), deviations in
 [../../docs/deviations.md](../../docs/deviations.md). Full output: [ANALYSIS-test.md](ANALYSIS-test.md),
 [analysis-test.json](analysis-test.json); exploratory analyses: [EXPLORATORY-35B.md](EXPLORATORY-35B.md). The 8B family
-is running: H1 is final for the 35B only once Holm includes the 8B, but its Holm-adjusted p cannot exceed twice the
-value below, so the 35B conclusion cannot change.
+is done ([RESULTATS-8B.md](RESULTATS-8B.md)): with Holm over the two original models, H1 holds for the 35B (Holm p
+1e-14), and **runs the other way in Qwen3-8B**.
 
 **Scope.** One model family (Qwen), no system prompt and no companion persona, scripted 12-turn histories with fixed
 assistant turns, factual questions the model knows well (correct in both option orders with a preference of at least
