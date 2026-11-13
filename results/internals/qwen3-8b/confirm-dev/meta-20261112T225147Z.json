@@ -1,0 +1,12 @@
+{
+ "started": "2026-11-12T22:51:47.166400+00:00",
+ "git_head": "e314b2b765305b338e3000c38ed7ff4b3dfd33cc",
+ "weights": "C:\\llm\\hf\\Qwen3-8B",
+ "split": "dev",
+ "n_items": 66,
+ "python": "3.12.9",
+ "torch": "2.11.0+cu128",
+ "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+ "transformers": "5.22.2",
+ "bitsandbytes": "0.50.2"
+}

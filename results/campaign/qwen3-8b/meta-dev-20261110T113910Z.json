@@ -1,0 +1,27 @@
+{
+ "model": "qwen3-8b",
+ "split": "dev",
+ "started_utc": "2026-11-10T11:39:10.952569+00:00",
+ "commit": "e314b2b765305b338e3000c38ed7ff4b3dfd33cc",
+ "preregistration_commit": null,
+ "known_file": "known_8b_dev.json",
+ "n_items": 10,
+ "cells": [
+  "L0",
+  "L3"
+ ],
+ "python": "3.12.9",
+ "argv": [
+  "--model",
+  "qwen3-8b",
+  "--split",
+  "dev",
+  "--known",
+  "results/known_items/known_8b_dev.json",
+  "--cells",
+  "L0,L3",
+  "--limit",
+  "10"
+ ],
+ "server_props": "unavailable: ReadTimeout"
+}

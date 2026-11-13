@@ -8,3 +8,6 @@ __pycache__/
 Thumbs.db
 results/campaign/.fitcache/
 figures/_previews/
+results/internals/*/acts_*/
+results/internals/*/acts_dev_summary/
+results/internals/*/*.partial.json
