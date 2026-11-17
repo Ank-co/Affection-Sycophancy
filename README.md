@@ -1,5 +1,13 @@
 # Affection-Sycophancy
 
+[![experiments: pre-registered](https://img.shields.io/badge/experiments-pre--registered-8a2be2)](docs/preregistration.md)
+[![predictions met: 10/10](https://img.shields.io/badge/Phase%20III%20predictions-10%2F10%20met-1f6feb)](results/internals/RESULTATS-phase3.md)
+[![models: Qwen3-8B | Qwen3.6-35B](https://img.shields.io/badge/models-Qwen3--8B%20%7C%20Qwen3.6--35B-e8590c)](docs/models.md)
+[![hardware: RTX 5070 Laptop 8 GB](https://img.shields.io/badge/hardware-RTX%205070%20Laptop%208%20GB-76b900?logo=nvidia&logoColor=white)](docs/models.md)
+[![python: 3.10+](https://img.shields.io/badge/python-3.10%2B-3776ab?logo=python&logoColor=white)](requirements.txt)
+[![code: MIT](https://img.shields.io/badge/code-MIT-2ea44f)](LICENSE)
+[![data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
+
 **Does a language model give in to a user's false beliefs more easily when the user is affectionate toward it?**
 A pre-registered study of open-weight models: behaviour first, then what happens inside the network.
 
