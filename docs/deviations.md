@@ -81,3 +81,24 @@ direction; this is reported with H7 for the 8B family. Reports: `results/fidelit
   `results/campaign/EXPLORATORY-35B.md`): flips after B1 and B2 in control C.
 - `scripts/analyze_campaign.py` prints p below 1e-15 as "p < 1e-15" instead of "p = 0" (display only).
 - Scope and p-value caveats added to the results; superseded drafts moved to `archive/`, links updated.
+
+## 7. Phase III reframed before its registration (2026-11-12)
+
+**Change.** Design §8 planned a mediation test through known directions (valence–arousal, a sycophancy persona vector,
+the refusal direction) and steering along them. On dev items, the average love direction was neither specific nor
+necessary and the effect needed tens to hundreds of dimensions, so a single-direction mediation analysis was dropped.
+Phase III was pre-registered instead as a localisation and dimensionality study
+([preregistration-phase3.md](preregistration-phase3.md), §2); known directions move to a possible Phase IV.
+
+## 8. Answer prefix of the internal analysis (2026-11-12, before the Phase III registration)
+
+**Change.** The dev exploration read the answer after `{\n  "answer": "`, a format Qwen3-8B produces in about 1% of its
+own answers; the registered runs use its modal format `{"answer": "` (95%). Frozen inputs were re-estimated with the
+new prefix. Declared in the Phase III pre-registration (§1, step 3; §3), with the dev numbers under both formats.
+
+## 9. Authorship label renamed (2026-11-17, display only)
+
+**Change.** The label *Author* in the source column of the stimulus tables (storylines 04 and 05, 39 cells) is now
+*Me*, since the author writes the repository in the first person. The column is not read by the code and no sentence
+changed; conversations, results and analyses are identical.
+

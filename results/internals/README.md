@@ -1,7 +1,9 @@
-# Phase III: inside Qwen3-8B (exploration on dev items; nothing here is confirmatory)
+# Phase III: inside Qwen3-8B
 
-The internal analysis will be pre-registered before any test-split run. Until then, everything in this folder uses dev
-items only and serves to choose layers, directions and tests.
+**Confirmatory results (test items): [RESULTATS-phase3.md](RESULTATS-phase3.md).** The rest of this file is the
+exploration on dev items that led to the pre-registration; nothing below is confirmatory.
+
+Everything below used dev items only and served to choose layers, directions and tests.
 
 ## Step 0. PyTorch reproduces the GGUF behaviour (2026-11-10)
 

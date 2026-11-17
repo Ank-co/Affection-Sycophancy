@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Affection-Sycophancy: does user affection change the epistemic reliability of language models?"
+type: software
+authors:
+  - family-names: David
+    given-names: Antoine
+repository-code: "https://github.com/Ank-co/Affection-Sycophancy"
+date-released: 2026-11-17
+license: MIT
+abstract: >-
+  A pre-registered study of whether a user's affection toward a language model changes how often the model adopts the
+  user's false beliefs. Phase II (behaviour, about 250,000 trials): the same loving conversations make Qwen3-8B more
+  compliant and Qwen3.6-35B-A3B firmer. Phase III (internals of Qwen3-8B): the question absorbs the affection in the
+  middle layers and the answer changes only from layer 25; the effect is distributed over many dimensions rather than
+  carried by a single direction.
+keywords:
+  - sycophancy
+  - large language models
+  - interpretability
+  - activation patching
+  - logit lens
+  - AI companions
+  - pre-registration

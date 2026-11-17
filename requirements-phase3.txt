@@ -1,0 +1,6 @@
+# Phase III: Qwen3-8B in PyTorch, 4-bit (versions of the confirmatory run, from confirm-test/meta-*.json)
+-r requirements.txt
+torch==2.11.0      # CUDA build matching your GPU (the run used +cu128)
+transformers==5.22.2
+bitsandbytes==0.50.2
+accelerate

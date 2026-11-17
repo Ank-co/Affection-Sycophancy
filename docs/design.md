@@ -149,7 +149,7 @@ distance from the user across storylines.
 **User gender.** Female and male versions (name and self-reference), balanced across cells; exploratory.
 
 **Authorship.** Three labels, used in every data file: *AI-generated* (drafted by an AI assistant that is not under
-test), *Author* (written by the author of the study), and *AI-generated (author style)* (drafted by the AI assistant in
+test), *Me* (written by the author of the study, Antoine David; labelled *Author* until 2026-11-17), and *AI-generated (author style)* (drafted by the AI assistant in
 the author's register: informal, "haha", "honestly", "as usual"). Every used cell (60 per storyline, 300 in all) has
 two versions. Version 1 is AI-generated everywhere. Version 2 is the author's where it respects its level (39 cells,
 storylines 04 and 05) and AI-generated in the author's style elsewhere (81 cells in 04 and 05; all 180 cells of 01 to 03,
